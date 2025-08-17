@@ -126,7 +126,34 @@ function affiche(a) {
                 
             </div>
 <!-- Pub web site -->
+<div id="pub">
+  <div class="titre">
+    <h1>Découvrez nos <br><span>nouveaté du moment</span></h1>
+  </div>
+  
+  <div class="carousel">
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+  </div>
+</div>
+   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
+  <script>
+    var carouselElement = document.querySelector('.carousel');
+
+    if (carouselElement) {
+      var flickityInstance = new Flickity(carouselElement, {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 2000,
+        pauseAutoPlayOnHover: true,
+        imagesLoaded: true
+      });
+    }
+  </script>
 <!-- section -->
   <div id="sec">
     <div class="titre">
