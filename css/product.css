@@ -13,6 +13,7 @@
     overflow: hidden; /* masque l'image qui dépasse */
     transition: all 800ms;
     
+    
 }
 .carte .pr-ecriture h1{
     font-size:300% ;
@@ -72,10 +73,11 @@
 @media (max-width: 576px) {
     /* Styles pour téléphone */
        .carte {
-    
-    width: 100px;
+    padding: 0;
+    width: 30vh;
     /*height: 90vh;*/
-    height: 200px;
+    height: 60vh;
+    padding: 20px;
     
 }
   .carte img{

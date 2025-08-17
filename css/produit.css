@@ -1,1 +1,9 @@
-.produit { padding:40px; display:flex; flex-wrap:wrap; justify-content:center; }
+.product-part{
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction:row;
+    gap: 20px; /* espace horizontal et vertical */
+    flex-wrap: wrap;
+    justify-content: center
+}

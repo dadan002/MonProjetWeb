@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/navtel.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="css/produit.css">
+  <link rel="stylesheet" href="css/global.css">
   <style>
   
 /* Base resets */
@@ -47,6 +49,7 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
 </head>
 <body>
 <!-- Desktop header -->
+<!-- Desktop header -->
 <div class='header'>
                 <div id='rech'>
                     <input type="search"  id="recherche" placeholder='RECHERCHE' />
@@ -55,7 +58,7 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
                 </div>
                 <div id='connect'>
                     <div class='logo'>
-                        <img src='/source/logoblanc.png' alt="logo" id='logo' />
+                        <img src='./source/logoblanc.png' alt="logo" id='logo' />
                     </div>
                     <div class='connect'>
                             <ul>
@@ -66,11 +69,32 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
                 </div>
             </div>
 <!-- Mobile header -->
+ <script>
+function affiche(a) {
+    const element = document.getElementById("Navtel");
+    if (a) {
+        console.log("element")
+        console.log(element)
+        if (element) {
+            element.style.width = "0%";
+            document.body.style.overflow= "auto"; /* bloque le scroll */
+            
+        }
+        
+    }
+    else{
+        console.log("z")
+        element.style.width = "30%";
+        document.body.style.overflow= "hidden";
+    }
+    console.log(a)
+}
+</script>
 <div class='headermob'>
                 
                 <div id='logo'>
-                    <i class='bx bx-menu' onClick=></i>
-                    <img src='source/logo(blanc).png' alt="logo" id='logo' />
+                    <i class='bx bx-menu' onClick="affiche(false)"></i>
+                    <img src='./source/logoblanc.png' alt="logo" id='logo' />
 
                 </div>
                 <div class='rech'>
@@ -89,8 +113,8 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
 <!-- Desktop nav -->
 <div id='nav'>
                 <ul>
-                    <li><a href=".">Acceuil</a></li>
-                    <li><a href=".">Produit</a></li>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="produit.html">Produit</a></li>
                   
                     <li><a href=".">Contact</a></li>
                 </ul>
@@ -100,16 +124,18 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
               <span ><p onClick=>X</p></span>
               <hr />
               <ul>
-              <li><a href=".">Acceuil</a></li>
+              <li><a href="index.html">Acceuil</a></li>
               <hr />
-              <li><a href=".">Produit</a></li>
+              <li><a href="produit.html">Produit</a></li>
               <hr />
               <li><a href=".">Contact</a></li>
               <hr />
               </ul>
                 
             </div>
-<main><h1 style='padding: 1rem'>Produits</h1><section id='grid' class='grid'><div class="carte">
+
+  <div class="product-part">
+  <div class="carte">
                 <img src= alt="" />
                 <div class='pr-ecriture'>
                     <h1>Produit 1</h1>
@@ -156,7 +182,8 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
                     <p id='prix'>60 TND</p>
 
                 </div>
-            </div></section></main>
+            </div></section>
+        </div></div>
 <div id="footer">
   <div class="line-title">
     <span>À propos</span>
@@ -179,7 +206,7 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
     </div>
-  </div>
+
 </div>
 </body>
 </html>

@@ -43,6 +43,7 @@ div#Navtel ul{
     text-align: center;
     
 }
+
 /* Fade in */
 #Navtel ul a::after {
     content: '';
