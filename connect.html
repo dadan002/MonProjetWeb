@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Produit</title>
   <!-- Icons (Boxicons + Font Awesome) -->
@@ -13,9 +14,9 @@
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/navtel.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/product.css" />
-  <link rel="stylesheet" href="css/produit.css">
+    <link rel="stylesheet" href="css/connect.css">
   <link rel="stylesheet" href="css/global.css">
+  <script src="connection.js"></script>
   <style>
   
 /* Base resets */
@@ -62,7 +63,7 @@ main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
                     </div>
                     <div class='connect'>
                             <ul>
-                                <li><a href="connect.html">connect<i class='bx  bx-user'  ></i> </a></li>
+                                <li><a href=".">connect<i class='bx  bx-user'  ></i> </a></li>
                                 <li><a href=".">panier<i class='bx  bx-basket'  ></i> </a></li>
                             </ul>
                     </div>
@@ -132,58 +133,28 @@ function affiche(a) {
               <hr />
               </ul>
                 
-            </div>
+</div>
 
-  <div class="product-part">
-  <div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 1</h1>
-                    <p id='prix'>10 TND</p>
+<!-- connect space -->
+<div id="content">
+<div id="account">
+    <div id="sett">
+      <a href="connection.html" target="con" style="color: #eee;text-decoration: none;width: 100%;"><span class="acc-info">Conenction</span></a>
+      <a href="inscription.html" target="con" style="color: #eee;text-decoration: none;width: 100%;"><span class="acc-info">Inscription</span></a>
+      
 
-                </div>
-            </div>
-<div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 2</h1>
-                    <p id='prix'>20 TND</p>
+    </div>
+    <div id="frame">
+      <iframe src="connection.html" name="con" frameborder="1"></iframe>
 
-                </div>
-            </div>
-<div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 3</h1>
-                    <p id='prix'>30 TND</p>
+    </div>
+</div>
+      <div id="confirmer">
+        <h3>confirmer l'effacement de votre compte</h3>
+        <button id="efface" onclick="supprimerCompte();deconnexion();document.getElementById('confirmer').style.display='none';document.getElementById('account').style.display='none'">confirmer</button> <button id="annuler" onclick="document.getElementById('confirmer').style.display='none';document.getElementById('account').style.display='block'">annuler</button>
+      </div></div>
 
-                </div>
-            </div>
-<div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 4</h1>
-                    <p id='prix'>40 TND</p>
 
-                </div>
-            </div>
-<div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 5</h1>
-                    <p id='prix'>50 TND</p>
-
-                </div>
-            </div>
-<div class="carte">
-                <img src= alt="" />
-                <div class='pr-ecriture'>
-                    <h1>Produit 6</h1>
-                    <p id='prix'>60 TND</p>
-
-                </div>
-            </div></section>
-        </div></div>
 <div id="footer">
   <div class="line-title">
     <span>À propos</span>

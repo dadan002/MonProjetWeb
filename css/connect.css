@@ -1,0 +1,143 @@
+#account{
+    width: 100%;
+    left: 15%;
+    top: 15%;
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+
+    margin: auto;
+
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.3);
+
+    border: 1px solid rgba(0, 0, 0, 0.932);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    color: white;
+}
+#content{
+
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    padding: 2%;
+}
+.acc-info{
+    display: flex;
+    padding: 10%;
+    margin: 1%;
+    border: 1px solid ; /* gris à 30% d’opacité */;
+    border-color: rgba(65, 52, 63, 0.664);
+    border-width: 0.5px;
+
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+}
+.acc-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+#sett{
+    display: flex;
+    flex-direction: column;
+    margin-top:1% ;
+    height: 80vh;
+    width: 30%;
+
+}
+#frame{
+        margin: 0;
+    padding: 0;
+    height: 80vh;
+
+    width: 70%;
+}
+
+#sett #drop:hover,#efface:hover,#annuler:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+#frame iframe{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-color: rgba(65, 52, 63, 0.233);
+}
+#confirmer{
+    display: none;
+    position: fixed;
+    height: 40vh;
+    width: 58%;
+    margin-left: 20%;
+    top:20%;
+
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+    z-index: 1000;
+
+
+}
+#confirmer h3{
+    margin-top: 6%;
+    font-size: xx-large;
+    color: aliceblue;
+}
+#efface{
+    background-color: rgb(208, 0, 250);
+    padding: 2%;
+    font-size: larger;
+    font-weight: bolder;
+    margin-right: 25%;
+    margin-top: 10%;
+
+
+    
+}
+#annuler{
+    background-color: rgb(0, 0, 0);
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    margin-right: 3%;
+    color: aliceblue;
+    font-size: larger;
+    font-weight: bolder;
+
+
+}
+@media(max-width: 576px){
+    #account{
+        flex-direction: column;
+    }
+    #sett{
+    display: flex;
+    flex-direction: row;
+
+    height: 20vh;
+    width: 100%;
+        justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */    
+}
+#frame{
+        margin: 0;
+    padding: 0;
+    height: 70vh;
+
+    width: 100%;
+}
+.acc-info{
+    width: 100%;
+    height: 20vh;
+}
+}

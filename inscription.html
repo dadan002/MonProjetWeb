@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/connection.css">
+<meta charset="UTF-8">
+<script src="connection.js"></script>
+<form class="sign-up-in"  method="POST" id="login-div">
+
+          <div class="auth-menu" id="register-menu" onclick="event.stopPropagation()">
+            <h3>Inscription</h3>
+            <ul>
+              <li><input type="text" id="username" name="username" placeholder="Username" onchange="regconditions()"></li>
+              <li><input type="email" id="email" name="email" placeholder="Email Address" onchange="regconditions()"></li>
+              <li><input type="password" name="password"id="password" placeholder="Password" onchange="regconditions()"></li>
+              <li><input type="password" id="confirm" placeholder="Confirm Password" onchange="regconditions()"></li>
+              <li><input type="date" name="daten" id="date"></li>
+              <li><label id="error-message"></label></li>
+              <li><hr></li>
+              <li>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="terms" onchange="regconditions()">I agree to the <a href="#">Terms & Conditions</a>
+                </label>
+              </li>
+              <li><button id="bt-register" onclick="regconditions()" disabled>Create Account</button></li>
+            </ul>
+          </div>
+        </form>

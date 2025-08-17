@@ -1,0 +1,114 @@
+#login-div{
+    height: 80vh;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+
+}
+
+.auth-menu {
+    background-color: aliceblue;
+    
+
+    width: 320px;
+    padding: 25px;
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+
+}
+
+
+
+.auth-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.auth-menu h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.auth-menu li {
+    margin-bottom: 10px;
+}
+
+.auth-menu input[type="email"],
+.auth-menu input[type="password"],
+.auth-menu input[type="text"],
+.auth-menu input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#error-message{
+    color: red;
+}
+.auth-menu input::placeholder {
+    color: #aaa;
+}
+#error-message{
+    color: red;
+}
+.auth-menu input::placeholder {
+    color: #aaa;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-right: 8px;
+}
+
+.auth-menu a {
+    color: #ff00fb;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+.auth-menu a:hover {
+    text-decoration: underline;
+}
+
+.auth-menu hr {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 10px 0;
+}
+
+.auth-menu button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #6c018c, #ff00fb);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.auth-menu button:hover {
+    transform: scale(1.03);
+}
+
