@@ -1,0 +1,65 @@
+#Navtel{
+    background-color: aliceblue;
+    width: 0%;
+    position:absolute;
+    top: 0;
+    float: left;
+    height: 100vh;
+    overflow-y: auto;      /* scroll vertical uniquement dans la sidebar */
+    transition: width 1s;
+    clear: both;
+}
+/*overflow: hidden; /* bloque le scroll */
+#Navtel span{
+    text-align: right;
+    cursor: pointer;
+    
+
+}
+#Navtel span p{
+    padding-right: 15px;
+    padding-bottom: 5%;
+
+}
+div#Navtel ul{
+    list-style: none;
+    
+    display: flex;        /* aligne les <li> côte à côte */
+    gap: 20rem;            /* espace horizontal entre eux */
+    display: block;
+    width: 100%;
+}
+#Navtel ul li{padding-bottom: 5%;
+    padding-top: 5%;}
+#Navtel ul a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    display: block;
+    position: relative;
+    
+    text-align: center;
+    
+}
+/* Fade in */
+#Navtel ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    
+    height: 0.1em;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+#Navtel ul a:hover::after,
+#Navtel ul a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+

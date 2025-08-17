@@ -1,0 +1,151 @@
+#pub{
+    height: 48vh;
+    background-image: url('../source/plage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+
+}
+    
+
+
+
+.carousel {
+    background-color: transparent;
+    height: 40vh;
+    width: 50%;
+    margin: 0 auto;
+
+
+}
+
+.carousel-cell {
+    width: 60%;
+    height: 40vh;
+    margin-right: 10px;
+    border-radius: 10px;
+    
+    font-size: 2rem;
+
+}
+#pub div.carousel .carousel-cell:nth-child(1){
+    background-image: url('../source/pub1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pub div.carousel .carousel-cell:nth-child(2){
+    background-image: url('../source/pub2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pub div.carousel .carousel-cell:nth-child(3){
+    background-image: url('../source/pub3.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pub div.carousel .carousel-cell:nth-child(4){
+    background-image: url('../source/pub4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pub .titre{
+    display: absolute;
+    height: 100%;
+    width: 40%;
+
+
+}
+#pub .titre h1{
+    padding-left: 20%;
+    
+    padding-top: 15%;
+    font-size: 5.3vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: cursive;
+    
+}
+#pub .titre h1 span{
+    display: inline-block; /* ou block */
+    text-indent: 2em;}
+
+
+/* Moyens appareils (tablettes ou petits laptops) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    #pub{
+    height: 55vh;
+}
+  /* Styles pour tablettes */
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Styles pour petits écrans */
+    #pub{
+    height: 68vh;}
+    #pub .titre h1{
+
+    padding-top: 30%;
+    
+}
+    .carousel-cell {
+    width: 60%;
+    height: 50vh;
+
+}
+.carousel {
+
+    height: 49vh;
+    width: 55%;
+
+}
+}
+@media (max-width: 576px) {
+    /* Styles pour téléphone */
+    #pub{
+        height: 160vh;
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    padding-top: 0%;
+    text-align: center;
+    gap: 8vh;
+    }
+    #pub .titre{
+        height: 30%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #pub .titre h1{
+        padding-left: 0%;
+        
+        padding-top: 0%;
+        font-size: 9vh;
+        
+    }
+    #pub .titre h1 span{
+        text-indent: 0em;
+        padding-top: 0%;}
+    .carousel {
+
+            height: 45%;
+            width: 85%;
+        
+        }
+    .carousel-cell {
+            width: 60%;
+            height: 65vh;
+        
+        }
+
+  }

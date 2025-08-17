@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produit</title>
+  <!-- Icons (Boxicons + Font Awesome) -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/headermob.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/navtel.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <style>
+  
+/* Base resets */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;line-height:1.4}
+
+/* Show desktop by default, hide mobile */
+.headermob,#Navtel{display:none}
+
+/* Simple layout helpers */
+main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
+.hero{padding:2rem 1rem}
+
+/* Switch at 1024px */
+@media (max-width: 1024px){
+  .header,#nav{display:none}
+  .headermob,#Navtel{display:block}
+}
+
+  
+/* Simple product grid */
+.grid{
+  max-width:1200px;margin:2rem auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:0 1rem;
+}
+.carte{background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.carte img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.pr-ecriture{padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center}
+#prix{font-weight:700}
+
+  </style>
+</head>
+<body>
+<!-- Desktop header -->
+<div class='header'>
+                <div id='rech'>
+                    <input type="search"  id="recherche" placeholder='RECHERCHE' />
+                    <i class='bx bx-search'></i>
+
+                </div>
+                <div id='connect'>
+                    <div class='logo'>
+                        <img src='/source/logoblanc.png' alt="logo" id='logo' />
+                    </div>
+                    <div class='connect'>
+                            <ul>
+                                <li><a href=".">connect<i class='bx  bx-user'  ></i> </a></li>
+                                <li><a href=".">panier<i class='bx  bx-basket'  ></i> </a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+<!-- Mobile header -->
+<div class='headermob'>
+                
+                <div id='logo'>
+                    <i class='bx bx-menu' onClick=></i>
+                    <img src='source/logo(blanc).png' alt="logo" id='logo' />
+
+                </div>
+                <div class='rech'>
+                    <input type="search" id='search' placeholder='  Rechercher' />
+                    <i class='bx bx-search'></i>
+                </div>
+                <div id='connect'>
+                    <div class='connect'>
+                            <ul>
+                                <li><a href="."><i class='bx  bx-user'  ></i> </a></li>
+                                <li><a href="."><i class='bx  bx-basket'  ></i> </a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+<!-- Desktop nav -->
+<div id='nav'>
+                <ul>
+                    <li><a href=".">Acceuil</a></li>
+                    <li><a href=".">Produit</a></li>
+                  
+                    <li><a href=".">Contact</a></li>
+                </ul>
+            </div>
+<!-- Mobile nav -->
+<div id='Navtel'>
+              <span ><p onClick=>X</p></span>
+              <hr />
+              <ul>
+              <li><a href=".">Acceuil</a></li>
+              <hr />
+              <li><a href=".">Produit</a></li>
+              <hr />
+              <li><a href=".">Contact</a></li>
+              <hr />
+              </ul>
+                
+            </div>
+<main><h1 style='padding: 1rem'>Produits</h1><section id='grid' class='grid'><div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 1</h1>
+                    <p id='prix'>10 TND</p>
+
+                </div>
+            </div>
+<div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 2</h1>
+                    <p id='prix'>20 TND</p>
+
+                </div>
+            </div>
+<div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 3</h1>
+                    <p id='prix'>30 TND</p>
+
+                </div>
+            </div>
+<div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 4</h1>
+                    <p id='prix'>40 TND</p>
+
+                </div>
+            </div>
+<div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 5</h1>
+                    <p id='prix'>50 TND</p>
+
+                </div>
+            </div>
+<div class="carte">
+                <img src= alt="" />
+                <div class='pr-ecriture'>
+                    <h1>Produit 6</h1>
+                    <p id='prix'>60 TND</p>
+
+                </div>
+            </div></section></main>
+<div id="footer">
+  <div class="line-title">
+    <span>À propos</span>
+  </div>
+
+  <div class="info">
+    <div class="contact">
+      <p><strong>Nous contacter :</strong></p>
+      <p>
+        Mail <i class="bx bx-envelope-open"></i> :
+        <a href="mailto:salhi.skander.002@gmail.com"> salhi.skander.002@gmail.com</a><br/>
+        Tel <i class="bx bx-phone"></i> :
+        <a href="tel:55253961"> 55253961</a>
+      </p>
+    </div>
+
+    <div class="res">
+      <p><strong>Où nous suivre :</strong></p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

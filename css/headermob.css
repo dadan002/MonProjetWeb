@@ -1,0 +1,131 @@
+div.headermob{
+    width: 100%;
+    background-color: #333;
+    height: 14vh;
+    clear: both;
+}
+div.headermob #logo{
+    
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    float: left;
+}
+div.headermob #logo i{
+    cursor: pointer;
+    font-size: 28px;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    padding-right: 8px;
+    padding-left: 50px;
+
+}
+div.headermob #logo img{
+    height: 70%;
+    width: 60%;
+    text-align:end;
+    float:left
+}
+div.headermob  .rech{
+    float: left;
+    width: 34%;
+    height: 100%;
+    display: flex;
+    justify-content: end; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+}
+div.headermob  #search{
+ height: 48%;
+ width: 55%;
+ border-radius: 5px
+}
+div.headermob  .rech i{
+ position: absolute;
+ padding-right: 5px;
+}
+
+div.headermob  #connect{
+    height: 100%;
+    float: right;
+    width: 40%;
+    color: #d83535;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+}
+
+div.headermob div.connect ul{
+    list-style: none;
+    padding-left: 35%;
+    display: flex;
+    gap: 1rem;            /* espace horizontal entre eux */
+
+    
+}
+div.headermob div.connect ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around; /* centre horizontalement */
+    flex-direction:row; /* aligne les enfants verticalement */
+    gap: 10%; /* Espace vertical entre les éléments */
+    font-weight: 500;
+    font-size: 140%;
+    position: relative;
+    overflow: hidden;
+    transition: color 200ms;
+
+
+}
+div.headermob div.connect ul li a:hover{
+    color: #635f5f;
+}
+/* Très petits écrans (téléphones en portrait) */
+@media (max-width: 576px) {
+  /* Styles pour le conteneur principal */
+  div.headermob {
+    /* La propriété la plus importante est d'utiliser Flexbox et de changer la direction */
+    display: flex;
+    flex-direction: column; /* Les éléments vont s'empiler verticalement */
+    height: auto; /* La hauteur s'ajuste au nouveau contenu */
+    width: 100%;
+  }
+
+  /* Styles pour les sections enfants */
+  div.headermob #logo,
+  div.headermob .rech,
+  div.headermob #connect {
+    /* Annuler le float pour éviter les problèmes d'affichage en colonne */
+    float: none;
+    width: 100%; /* Chaque élément prend toute la largeur */
+    height: 30vh; /* Hauteur ajustée pour chaque section pour éviter l'effet "écrasé" */
+    justify-content: center; /* Centrer le contenu de chaque section */
+  }
+
+  /* Styles pour la barre de recherche et son icône */
+  div.headermob .rech {
+    position: relative;
+  }
+  div.headermob #search {
+    width: 80%; /* Augmente la largeur du champ de recherche */
+    box-sizing: border-box;
+    padding-right: 40px; /* Espace pour l'icône */
+  }
+  div.headermob .rech i {
+    position: absolute; /* L'icône se positionne par rapport au conteneur de recherche */
+    right: 15%;
+  }
+
+  /* Le menu est centré horizontalement */
+  div.headermob .connect ul {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+  
+  /* Petits appareils (téléphones en paysage ou petits tablettes) */
+
+

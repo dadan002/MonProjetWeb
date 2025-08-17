@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil</title>
+  <!-- Icons (Boxicons + Font Awesome) -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/headermob.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/navtel.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/section.css">
+  <link rel="stylesheet" href="css/pub.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+  
+/* Base resets */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;line-height:1.4}
+
+/* Show desktop by default, hide mobile */
+.headermob,#Navtel{display:none}
+
+/* Simple layout helpers */
+main#content{max-width:1200px;margin:2rem auto;padding:0 1rem}
+.hero{padding:2rem 1rem}
+
+/* Switch at 1024px */
+@media (max-width: 1024px){
+  .header,#nav{display:none}
+  .headermob,#Navtel{display:block}
+}
+
+  </style>
+  
+</head>
+<body>
+<!-- Desktop header -->
+<div class='header'>
+                <div id='rech'>
+                    <input type="search"  id="recherche" placeholder='RECHERCHE' />
+                    <i class='bx bx-search'></i>
+
+                </div>
+                <div id='connect'>
+                    <div class='logo'>
+                        <img src='./source/logoblanc.png' alt="logo" id='logo' />
+                    </div>
+                    <div class='connect'>
+                            <ul>
+                                <li><a href=".">connect<i class='bx  bx-user'  ></i> </a></li>
+                                <li><a href=".">panier<i class='bx  bx-basket'  ></i> </a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+<!-- Mobile header -->
+ <script>
+function affiche(a) {
+    const element = document.getElementById("Navtel");
+    if (a) {
+        console.log("element")
+        console.log(element)
+        if (element) {
+            element.style.width = "0%";
+            document.body.style.overflow= "auto"; /* bloque le scroll */
+            
+        }
+        
+    }
+    else{
+        console.log("z")
+        element.style.width = "30%";
+        document.body.style.overflow= "hidden";
+    }
+    console.log(a)
+}
+</script>
+<div class='headermob'>
+                
+                <div id='logo'>
+                    <i class='bx bx-menu' onClick="affiche(false)"></i>
+                    <img src='./source/logoblanc.png' alt="logo" id='logo' />
+
+                </div>
+                <div class='rech'>
+                    <input type="search" id='search' placeholder='  Rechercher' />
+                    <i class='bx bx-search'></i>
+                </div>
+                <div id='connect'>
+                    <div class='connect'>
+                            <ul>
+                                <li><a href="."><i class='bx  bx-user'  ></i> </a></li>
+                                <li><a href="."><i class='bx  bx-basket'  ></i> </a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+<!-- Desktop nav -->
+<div id='nav'>
+                <ul>
+                    <li><a href=".">Acceuil</a></li>
+                    <li><a href=".">Produit</a></li>
+                  
+                    <li><a href=".">Contact</a></li>
+                </ul>
+            </div>
+<!-- Mobile nav -->
+<div id='Navtel'>
+              <span ><p onClick="affiche('true')">X</p></span>
+              <hr />
+              <ul>
+              <li><a href=".">Acceuil</a></li>
+              <hr />
+              <li><a href=".">Produit</a></li>
+              <hr />
+              <li><a href=".">Contact</a></li>
+              <hr />
+              </ul>
+                
+            </div>
+<!-- Pub web site -->
+<div id="pub">
+  <div class="titre">
+    <h1>Découvrez nos <br><span>nouveaté du moment</span></h1>
+  </div>
+  
+  <div class="carousel">
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+  </div>
+</div>
+   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script>
+    var carouselElement = document.querySelector('.carousel');
+
+    if (carouselElement) {
+      var flickityInstance = new Flickity(carouselElement, {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 2000,
+        pauseAutoPlayOnHover: true,
+        imagesLoaded: true
+      });
+    }
+  </script>
+<!-- section -->
+  <div id="sec">
+    <div class="titre">
+      <h1>Nos nouvelle collection</h1>
+    </div>
+    
+    <div class="produits">
+      <div class="produit">
+        <a href="#"><img src="./source/sec1/pub1.webp" alt="Collection 1" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec1/pub2.webp" alt="Collection 2" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec1/pub3.webp" alt="Collection 3" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec1/pub4.webp" alt="Collection 4" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+    </div>
+  </div>
+<!-- section -->
+  <br />
+  <hr class="sep_sec" />
+
+  <div id="sec">
+    <div class="titre">
+      <h1>Top vente</h1>
+    </div>
+    
+    <div class="produits">
+      <div class="produit">
+        <a href="#"><img src="./source/sec2/pub1.webp" alt="Top vente 1" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec2/pub2.webp" alt="Top vente 2" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec2/pub3.webp" alt="Top vente 3" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec2/pub4.webp" alt="Top vente 4" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+    </div>
+  </div>
+<!-- section -->
+  <br />
+  <hr class="sep_sec"/>
+
+  <div id="sec">
+    <div class="titre">
+      <h1>Nos classique</h1>
+    </div>
+    
+    <div class="produits">
+      <div class="produit">
+        <a href="#"><img src="./source/sec3/pub1.webp" alt="Classique 1" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec3/pub2.webp" alt="Classique 2" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec3/pub3.webp" alt="Classique 3" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+      <div class="produit">
+        <a href="#"><img src="./source/sec3/pub4.webp" alt="Classique 4" loading="lazy"/></a>
+        <button>acheter</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- footer -->
+<div id="footer">
+  <div class="line-title">
+    <span>À propos</span>
+  </div>
+
+  <div class="info">
+    <div class="contact">
+      <p><strong>Nous contacter :</strong></p>
+      <p>
+        Mail <i class="bx bx-envelope-open"></i> :
+        <a href="mailto:salhi.skander.002@gmail.com"> salhi.skander.002@gmail.com</a><br/>
+        Tel <i class="bx bx-phone"></i> :
+        <a href="tel:55253961"> 55253961</a>
+      </p>
+    </div>
+
+    <div class="res">
+      <p><strong>Où nous suivre :</strong></p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

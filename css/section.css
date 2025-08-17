@@ -1,0 +1,92 @@
+#sec {
+  min-height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+#sec .titre {
+  width: 100%;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 10px;
+  margin-bottom: 1.5rem;
+}
+
+#sec .produits {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Keeps layout centered */
+}
+
+#sec .produits .produit {
+  flex: 1 1 220px; /* Minimum 220px wide, then grow */
+  max-width: 280px; /* Prevent too large on big screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s;
+}
+
+#sec .produits .produit img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#sec .produits .produit button {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: solid 0.1px black;
+  background-color: beige;
+  transition: all 0.3s;
+}
+
+#sec .produits .produit:hover {
+  background: rgba(30, 30, 30, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  color: white;
+}
+
+#sec .produits .produit button:hover {
+  background-color: yellow;
+  border: solid 2px orange;
+  cursor: pointer;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #sec {
+    min-height: auto;
+  }
+  #sec .titre {
+    text-align: center;
+    letter-spacing: 5px;
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  #sec {
+    min-height: auto;
+    padding: 1rem;
+  }
+  #sec .produits {
+    gap: 1rem;
+  }
+  #sec .produits .produit {
+    flex: 1 1 150px;
+  }
+}
